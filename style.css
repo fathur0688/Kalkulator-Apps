@@ -1,0 +1,117 @@
+:root {
+  --bg-body: #121212;
+  --bg-calculator: #1e1e1e;
+  --bg-display: #000;
+  --text-display: #0f0;
+  --button-bg: #2c2c2c;
+  --button-hover: #3a3a3a;
+  --equal-bg: #0a84ff;
+  --equal-hover: #006edc;
+  --button-text: #fff;
+}
+
+body.light {
+  --bg-body: #f0f0f0;
+  --bg-calculator: #ffffff;
+  --bg-display: #e0e0e0;
+  --text-display: #333;
+  --button-bg: #ddd;
+  --button-hover: #ccc;
+  --equal-bg: #007bff;
+  --equal-hover: #0056b3;
+  --button-text: #000;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s;
+}
+
+.calculator {
+  background: var(--bg-calculator);
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.display {
+  width: 100%;
+  background: var(--bg-display);
+  color: var(--text-display);
+  font-size: 1.8em;
+  text-align: right;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  min-height: 60px;
+  word-wrap: break-word;
+  transition: background 0.3s, color 0.3s;
+}
+
+#copy-btn, #theme-btn {
+  background: var(--equal-bg);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#copy-btn:hover, #theme-btn:hover {
+  background: var(--equal-hover);
+}
+
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1em;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.equal {
+  background: var(--equal-bg);
+  color: white;
+}
+
+.equal:hover {
+  background: var(--equal-hover);
+}
